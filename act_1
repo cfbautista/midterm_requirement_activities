@@ -1,0 +1,67 @@
+Overview of Midterm Project
+
+
+New Topics :
+
+1. Asset Pipeline
+2. Standard Assets and Asset Packages
+3. Other Editor Features
+4. Project Organisations ( Best Practises)
+5. User Interface Basics
+6. Trail Renderer
+7. Particle Systems
+8. Animation
+9. Game Play Systems ( Scoring, 
+10. Coding ( Pre-created)
+
+
+
+MidtermProject_Requirements 
+
+Phase 1 : Package Related to the Project
+
+
+1. Download the Project assets at the given link on Github.
+2. Create a new project ; name the project YourGroupAliasName_ Midterm. =)
+3.  Import the asset package “character”  on Asset->Character ( Note* this takes time to load, leave everything imported with a checked mark”)
+4.  The package should be located on the Project  workspace as “Standard Assets”.
+5.  On Asset->Import Package kindly import CrossPlatformInput (Note* Leave the uncheck mark and proceed already on importing it).
+6.  Do as well on importing Prototyping and Utility package on the Project Workspace found in Standard Assets folder.
+
+7.  Now import the custom  package found the download assets folder of the package ( Note* the package is use for importing Pre-created scripts for the project) =) No Coding muna.. =)
+8.  Add the Audio folder file of the project asset on the Project Workspace
+9 . Preview these audio files on the Inspector View.
+
+
+Phase 2 : Setting up Game Scene
+
+1.  Setting up the floor scene of your game , on the Prototyping folder select ->Prefabs-> (select dimensions of game floor for this game) -> but preferably(select -> FloorPrototype64x01x64)
+2.  Rename the object->Gamefloor.
+3.  Resets Gamefloor component to make it half of its size, and scale the Gamefloor by setting a value of 0.5 for both x and z  only.
+
+4. Adding Obstacles on the Gamefloor
+	4.1 Drag floor dimension of (FloorPrototype04x01x04) in the GameFloor scene view. and rename it as bumper.	4.2 Duplicate the material created on this Bumper by selecting material on the Inspector View to highlight the material and Select Edit-> Duplicate on the menu bar, and name it as BumperMaterial
+	4. 3 Drag in between Audio and Scenes folder this material created.
+	4.4  Apply a new texture for this bumper by selecting Texture-> (Pre Made Color Assets) and drag it on the Maps of the bumper object.
+	4.5  Apply the new material on the bumper
+	4.6  Reset the Bumper component. and move it up 1m above on Position  y or Snap it on the Edit-> Snap Setting by targeting the Y 
+
+5.  Create a bumper Prefab by  selecting the object bumper and drag on the BumperMaterial on the Project
+	5.1 Drag 3 more bumper object in the scene by selecting the Prefab object bumper
+	5.2 Change the scale of one of the bumper by assigning 0.5 for x, y and apply the changes for all by selecting Apply for all scale
+
+
+Phase 3: Setting up for the Player Asset
+
+6. Under the Character->RollerBall-> Prefab-> drag Roller Ball for our jolen prefab.
+	6.1 Notice the Inspector view where this jolen has already applied script 
+		you can test it out by navigating it using arrow keys on keyboard.
+
+	6.2 Save Scene as Level 1 on Asset Folder
+
+
+—————————End of Phase 3——————
+
+
+	
+	
