@@ -1,0 +1,69 @@
+Camera Settings
+
+
+1. Align the Camera to View
+
+2. Rename the roller ball object “jolen”
+	- Select the jolen object and check the coordinates while set to game view, make
+	  sure axis is not rotating into one specific direction only, if this happens click on the
+	  “Global” right beside the center module at top
+
+3.  Attach a script found on the utility asset package name “ SmoothFollow” to the camera object.
+     
+	- Modify the parameters of the script on the Inspector view set  you desire values on the following component
+		* Target
+		* Distance
+
+	- Save the scene and test the changes on the game mode.
+
+4. Change the camera background color settings, select following settings on inspector view
+	- From Skybox to Solid color
+	- select desired background color.
+
+
+5.  Add audio source component direct to camera. and set the following parameters
+	- AudioClip source
+	- Loop
+	- Volume to 25 %
+
+
+Ball (Jolen Script)
+
+1. Apply a ball script found on the standard assets Rollerball -> Scripts-> Ball
+	Change the following settings as you test the game on your desired output.
+	 * Move Power
+	*  Use Torque	
+	*  Jump Power
+
+2. Change the Jolen appearance.
+
+	- Select on the jolen material and on the Inspector view under Mesh Renderer
+	  click on the material element (RollerBallGrey), this will be highlighted on the Standard
+	 assets material.
+
+	-  Duplicate the RollerBallGrey material and rename it as “RollerBall Material”
+	-  Move the duplicated material out of the Standard Assets folder and place it together
+	  with the bumper prefab.
+
+	- Modify the properties of the RollerBall material
+		* change on the albedo COLOR to 0056FFFF and specular to 00FFFFFF
+
+
+3. Apply Trail render component.
+	
+	- Select the jolen object and add component Trail Render/ or select component menu and add trail rendering.
+	-  Create a new material and name it as “Trail Material”.
+		- Change the Shader from Standard to Particles->Alpha Blended
+			-  Tint color to color “white”	
+	- Apply the material to the object
+		- change the properties of the trail render material  time = 2, width = 0.8
+		-  change the graph level by right click on the end of the line graph and add key
+		- change the color pick your own preference. (00FFEA,0080FF, 50) 
+
+4. Applying physics material on the Bumpers
+	*Select you main Bumper object and apply Physics Material on the Inspector view by selecting
+	PhysicsMaterials on Project assets and assign it to Material Box Collider
+	
+	* Apply these physics material to all the bumper prefab.
+
+----------------END---------
