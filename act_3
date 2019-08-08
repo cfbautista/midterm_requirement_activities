@@ -1,0 +1,91 @@
+Adding Health and Damage Script 
+
+1. Select the jolen  and add a Health script on it.
+2. Find the Health script config on the inspector view.
+	On lives Gone- > Select Load level when dead
+	Level to Load-> Type “Level 1”
+
+
+Apply Damage when the jolen fall on the game floor.
+
+1.  Duplicate the floor object on the Hierarchy tab and name the duplicated object to DeathZone
+2.  Convert the duplicated object now to prefab
+3.  Set the duplicated floor object just below of the main floor object.
+	- Change default position on the inspector view ( 0, -2, 0).
+	-  set the scale for both x and y to  “2”.
+
+4.  Create a new material used by the duplicated object  material.  This can be found on the
+    Inspector view as “NavyGrid”, name this as DeathZone Material.
+
+5. Apply this material on the DeathZone object on the hierarchy view.
+	- Change the albedo texture of this material, pick Color base on your own preference.
+	- Pick new color on the colorpicker.
+
+6.  Apply the Damage script on the duplicated floor material.
+	- Check the attribute  “Is Trigger” to implement the damage control on the floor and reset the game.
+
+
+Pickups (Setup a coin objects).
+
+1. Create a new object prototype of the coin object. Select Prototyping->Models-> PickupPrototype01x01x01
+   and drag this model on scene.
+	- Rename this object “coin”.
+	- Reset the transform value of this object on the inspector view.
+	- change the size of the object base on your own preference on the inspector view -> scale
+
+2 . Change the material object of the coin on the inspector view.	Select the material and duplicate it and name
+	Coin Material.
+
+3.  Apply the new material object on the Coin object on the heirarchy view.
+	- change the texture applied on the material object  , use SwatchYellowAlbedo
+
+
+4. Select the coin object  and apply collide physics on it , Add Component-> Physics-> Sphere Collider
+	- Adjust Radius of on this component( this is used as parameters when the jolen hit the coin)
+	- apply Trigger also as well.
+
+5. Add rotation scripts on the coin object.
+	- change the speed to 180/seconds
+	-  rotate around y
+	- test the game
+
+6. Apply a rigidbody component Physics-> RigidBody
+	- turn off Use of Gravity
+	- turn on Is Kinematic
+
+7.  Apply a Treasure script on the coin to let the game that a coin is actually a pickup.
+	- value change to 1
+	-  test and play
+
+8. Select the coin object and on the Inspector View-> Tag-> Add Tag-> Name it to pickup.
+	- once pickup is create, select coin object select the pickup tag on the inspector view under Tag.
+	
+9. Convert the coin now as prefab. And drag as many coin prefab on your scene view.
+	
+
+Score UI and GameOver UI
+
+1. Create a text UI object on the Hierarchy view.
+	- Rename the canvass to Main Canvass
+	- Inspector View-> UI Scale mode-> select Scale with screen size.
+	- Rename the text to Score Text
+
+2. Select the Score object and modify config on the Inspector View
+	- Align the score text on Top to Center
+	- Change text to  “0”
+	-  font size to 40
+	- Horizontal and Vertical Overflow to -> Overflow
+	- textalign -> center
+	- change the color of your own.
+
+3. Create a Canvass object on the Hierarchy view , name it Game Over Canvass
+	-  Inspector View-> UI Scale mode-> select Scale with screen size.
+	- Create a text inside of this new canvass
+	-  Select Score text inside of the previous canvass and on the  Text Script-> Click on the small arrow and select-> Copy component
+	-  Paste the copied component on the text script of the Game Over Canvass Text
+	-  Assign the location of the text to Middle to Center
+	- change the font to 150
+	- increase the Pos Y of the text make sure it does not cover the game scene
+
+———————End———————
+	
