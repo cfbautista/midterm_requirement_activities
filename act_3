@@ -87,5 +87,42 @@ Score UI and GameOver UI
 	- change the font to 150
 	- increase the Pos Y of the text make sure it does not cover the game scene
 
-———————End———————
+4. Create a button playAgain
+	- rename na button to playagain
+	- align the button at the center of the screen on the Inspector View -> React transform
+	- change the color of the button on the Image Script section.
+	- Uncheck the fill center this makes it more transaparent.
+	- Copy the component values of score text and apply the components values on the button text script
+	- Select the text of the play again button and applied component script.
+		- UI Button Level Load
+		- On script configuration assign "Level1" to Load level component.
+	- Select the Button Object (Note* not the button text)
+		- On the Button script component click the + button on the On Click() under Button Script
+		- Drag the button text to "Level to Load" component on the Button script
+		- Select the function UIButtonLevel Load
+	- Disable the Game Over Canvass by unchecking Inpsector Tag
+	- Enable Canvass used by Score text	
+	
+5. Create a game manager
+	- Create an empty object found at the Heirarchy Create-> Create Empty
+	- Reset the empty object Transform in the Inspector View
+	- Add script component on this object Scripts->Game Manager
+	- In the script Inspector view config do the following:
+		- Attach the jolen object on the "Player"
+		-  Game State is "Playing"
+		- Attach the Canvas of Score Text in the Main Canvass
+		- Attach Score Text on the Score Display
+		- Attach Game Over Canvass 
+		- Attach Game Over Score Text
+		- Attach Audio source which is compiled to Main Camera
+		- Pick audio source for Game Over
+		- Pick audio source for beat level.
+		
+6. Select jolen game object to modify changes
+	- Modify the Health Script config On Lives Gone-> Do nothing when Dead
+	
+	
+	------------End---------------
+	
+
 	
