@@ -1,0 +1,99 @@
+Enemies
+
+1. Create a CUBE object
+	- rename the objects as “enemy”
+	- reset it values to appear it on the centre
+
+2. Assign material object on the enemy
+	- duplicate existing material “DeathZone”
+	- rename the material object for enemy object
+	- change the albedo , switch to orange albedo
+	- apply the material now to the cube
+
+3.  Attach script component to the enemy object	
+	- add script “Chaser”
+	- speed change to 4
+	- distrance to 0
+	- assign the the jolen object as its target
+	- distance the object from jolen object
+	- add a rigidbody physics
+
+4.  Add material on the Box Collider
+	- select bouncy material 
+
+
+5. Add Damage and Health Script script on the enemy
+	- apply damage script component on the enemy
+	- check the damage on collision, uncheck the others if there are any.
+	- apply health script
+
+6. Create a prefab object of the enemy by dragging the object on the Project files
+	- add additional enemies on the scene.
+
+
+
+Particles and Sound Effects
+
+7. Create->Effects->Particle System
+	- rename as explode effect
+	- uncheck loop
+	-duration change to 1
+	- start lifetime to 1
+	- gravity 0.5 
+	- rate over time to 0
+	- burst count is 20
+	- shape change to hemisphere
+	- size over lifetime change the graph mode
+	- render mode change to mesh
+		-mesh value is RollerBall
+		- change the material as well to RollerBall Material
+
+8. Add a sound effect on the particle system
+	- Add audio  source component
+	- select PlayerExplosion clip
+
+9. Add component script
+	- add component script->Time Object Destructor
+		- time out is 3 seconds
+
+
+10. Make a prefab of the particle system
+
+11. Delete the game object effect particle on the Hierarchy view
+
+
+12. Apply prefab effect particle system on the Jolen object
+	- Under Health script config assign the prefab on the explosion.
+	
+
+13. Apply particle system on the coin object.
+	- Duplicate the particle effects prefab and name it as Explode Coin Effect
+		-start size is 0.2
+		-burst count is 10
+		- mesh value is the Coin mesh
+		- change to Coin material
+		- Audio source coin explosion
+		- Assign the prefab to any one of the Coin object on the Explosion Prefab and Click Apply
+		 to apply effect to all coin object
+
+		
+14. Apply the same principle on the Enemy object
+
+
+
+Animation
+
+15. Select the DeathZone game object
+	- Open Window->Animation
+	- Create -> Save as DeathZone Animation
+	- Drag the animation tab window to Game Scene View Tab
+	- Create animation by clicking the record button and changing the albedo color
+	 	- Time frame from 0.0 -> 0.10. 0.20.0.40
+
+
+
+
+———————— END———————————
+
+
+	
